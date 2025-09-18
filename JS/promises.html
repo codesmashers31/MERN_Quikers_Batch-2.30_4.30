@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>promise</title>
+</head>
+<body style="margin: 0;padding: 0;box-sizing: border-box;">
+    
+<div id="usercards" style="background-color: aquamarine;padding: 30px;height: 100vh;">
+ 
+</div>
+
+
+
+<script>
+
+    // Callback Methods
+    // const getData = (runthisprocess)=>{
+
+    //     setTimeout(()=>{
+    //         console.log("Login Completed..");
+    //         runthisprocess();
+    //     },3000)
+
+    // }
+
+
+    // getData(()=>{
+    //     console.log("Process completed Email send succfully");
+        
+    // });
+
+// Promise Methods
+
+let myPromise = new Promise((resolve,reject)=>{
+    let success = true;
+    if(success){
+        resolve('Data Fetched Succfully')
+    }else{
+        reject("Error")
+    }
+})
+
+
+//console.log(myPromise);
+
+// myPromise.then((result)=>console.log(result))
+// .catch((error)=>console.log(error.message))
+// .finally(()=>console.log("Process done"))
+
+
+
+
+// const datas = fetch("https://dummyjson.com/products?limit=10")
+// .then((res)=>res.json()).then((data)=>console.log(data))
+// .catch((error)=>console.log(error))
+
+
+
+//console.log(datas);
+
+
+
+const datas = async ()=>{
+
+    try{
+        let res = await fetch("https://dummyjson.com/products?limit=10");
+        let data = await res.json();
+        console.log(data.products);
+       
+        let cards = document.getElementById("usercards");
+
+        let cardsdesign = data.products.map((users)=>{
+               return `<div>
+                <h3>${users.id}</h3>
+                <p>${users.title}</p>
+                
+                </div>`
+        })
+ cards.textContent = "Loading"
+     setTimeout(()=>{
+ 
+  cards.innerHTML = cardsdesign;
+     },2000)
+        
+
+    }catch(error){
+         
+    console.log(error);
+    
+    }
+
+}
+
+
+datas();
+</script>
+
+
+</body>
+</html>
