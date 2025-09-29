@@ -1,107 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moto - GP</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-     <style>
-    .card {
-      transition: transform 0.22s ease, box-shadow 0.22s;
-      box-shadow: 0 4px 8px 0 rgba(22,22,26,0.18);
-      border: 0;
-      border-radius: 0.75rem;
-      margin-bottom: 1.5em;
-    }
-    .card:hover {
-      transform: scale(1.07);
-      box-shadow: 0 8px 24px 0 rgba(22,22,26,0.30);
-      z-index: 2;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM</title>
 </head>
+<body>
+  
 
-<body class="" style="background-color: black;">
-
-
-    <header class="mb-2">
-        <nav class="bg-dark d-flex justify-content-around align-items-center p-3">
-
-            <div class="p-2">
-                <img src="assets/logo/logo.svg" alt="" class="w-75">
-            </div>
-
-            <div class="d-flex gap-4">
-               <span class="fa-solid fa-house-user text-white ms-1 mt-1"></span><a href="" class="text-decoration-none text-white">Calendar</a>
-                <a href="" class="text-decoration-none text-white">Results &amp; Standings</a>
-                <a href="" class="text-decoration-none text-white">Riders &amp; Teams</a>
-                <a href="" class="text-decoration-none text-white"> VideoPass</a>
-                <a href="" class="text-decoration-none text-white">Videos</a>
-                <a href="" class="text-decoration-none text-white">News</a>
-            </div>
-
-            <div class="text-white">
-                <a href="" class="text-decoration-none text-white">Login</a> | <a href="" class="text-decoration-none text-white">Register</a>
-                <svg width="40" class="" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g id="MGP Icons/Helmet Line">
-                        <path id="Vector"
-                            d="M33.7589 24.0529L33.7022 23.7711C32.6763 18.6563 32.161 16.0897 32.1563 16.0715C31.583 13.7718 30.316 11.8348 28.4926 10.47C26.8026 9.2048 24.6767 8.49109 22.5067 8.46072C19.8759 8.42369 17.3919 8.97887 15.1237 10.1104C13.3152 11.0126 11.6434 12.28 10.1548 13.8774C7.63188 16.5848 6.51484 19.2863 6.46854 19.4L6.17188 20.1285L10.2211 21.4666L11.5893 25.3048L32.3063 31.5059L33.733 25.5092C33.8474 25.0278 33.8563 24.5381 33.7589 24.0533V24.0529ZM32.3034 25.1685L31.2371 29.6507L12.7241 24.1096L11.9897 22.05L15.2522 23.1278L15.7134 21.7322L11.3645 20.2963L8.16817 19.24C8.64521 18.3055 9.63965 16.5866 11.2304 14.8792C12.5985 13.4111 14.1293 12.2489 15.7804 11.4255C17.8367 10.3996 20.0926 9.89628 22.4867 9.93035C24.3489 9.95665 26.1693 10.5659 27.6122 11.6466C28.8834 12.5981 29.8371 13.8815 30.4104 15.4L19.7208 14.2581C19.5652 14.2415 19.4226 14.24 19.2845 14.2541C18.6074 14.3222 18.0493 14.6974 17.7526 15.2833C17.4322 15.9163 17.4663 16.7063 17.8415 17.3474L20.0119 21.2011C20.8804 22.7433 22.3667 23.8592 24.09 24.2633L30.9497 25.8715L31.2852 24.4404L24.4256 22.8322C23.1019 22.5218 21.96 21.6644 21.293 20.48L19.1193 16.6204L19.1119 16.6078C18.9871 16.3963 18.9685 16.137 19.0645 15.9478C19.1341 15.8104 19.2545 15.7348 19.4322 15.717C19.4674 15.7133 19.5122 15.7144 19.5652 15.72L30.8304 16.9233C31.1189 18.3604 31.9222 22.3648 32.2626 24.0607L32.3193 24.3426C32.3745 24.6178 32.3697 24.8959 32.3045 25.1692L32.3034 25.1685Z"
-                            fill="white"></path>
-                    </g>
-                </svg>
-            </div>
-
-        </nav>
-    </header>
-
-<section class="mb-3">
-  <div class="container py-5">
-    <div class="row justify-content-center">
-
-      <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex align-items-stretch">
-        <div class="card p-2 w-100">
-          <img src="assets/cards/Yamaha-M1.avif" alt="" class="w-100 rounded-2 mb-3">
-          <h4>Yamaha-M1</h4>
-          <button class="btn btn-dark rounded-pill">Click To see</button>
-        </div>
-      </div>
-
-      <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex align-items-stretch">
-        <div class="card p-2 w-100">
-          <img src="assets/cards/download.jpg" alt="" class="w-100 rounded-2 mb-3">
-          <h4>Yamaha-M1</h4>
-          <button class="btn btn-dark rounded-pill">Click To see</button>
-        </div>
-      </div>
-
-      <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex align-items-stretch">
-        <div class="card p-2 w-100">
-          <img src="assets/cards/2024-motogp-race-bikes.jpg" alt="" class="w-100 rounded-2 mb-3">
-          <h4 class="text-capitalize">motogp-race-bikes</h4>
-          <button class="btn btn-dark rounded-pill">Click To see</button>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
+   <h1 id="heading">This is dom</h1>
+    
 
 
-    <main class="mt-4 ">
-        <div class="p-4 container rounded-3 d-flex justify-content-center align-items-center flex-column text-white " style="background-color: #fefefe;">
-            <h1 class="text-center text-dark">Get the official MotoGP™ Newsletter!</h1>
-            <p class="text-center  text-dark fw-bold">Create a MotoGP™ account now and gain access to exclusive content, such as the MotoGP™ Newsletter, which features GP Reports, incredible videos and other 
-                interesting information about our sport.</p>
-                <button class="btn btn-info rounded-pill text-uppercase">Sign up for Free</button>
-        </div>
-    </main>
+  <script>
+    addEventListener("DOMContentLoaded", () => { 
 
-    <div class="bg-white mt-2 mb-0">
-   <h1>Copy@2025 Moto Gp</h1>
-    </div>
+         const head = document.getElementById("heading");
 
+
+       head.innerHTML = "Yes I am running On the browser"
+
+
+    })
+  </script>
 </body>
-
 </html>

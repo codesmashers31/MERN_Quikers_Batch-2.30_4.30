@@ -1,4 +1,5 @@
 import Footer from "./components/Footer";
+import LinkProcess from "./components/LinkProcess";
 import Navbar from "./components/Navbar";
 import Com_Notes from "./pages/Com_Notes";
 import HomePage from "./pages/HomePage";
@@ -12,6 +13,7 @@ const App = () => {
      <Routes>
      <Route path="/" element={<HomePage/>} />
       <Route path="/components" element={<Com_Notes/>} />
+      {/* <Route path="/link" element={<LinkProcess/>} /> */}
     </Routes>
     </div>
     <Footer/>
