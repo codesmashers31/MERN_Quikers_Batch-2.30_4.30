@@ -8,6 +8,7 @@ import Hooks_Process from "./components/Hooks_Process"
 import Fun from "./components/Fun"
 import Products from "./components/Products"
 import Class from "./components/Class"
+import Fetch from "./components/Fetch"
 
 
 function App() {
@@ -17,7 +18,7 @@ function App() {
     <>
      <NavBar/>
      
-
+   
      <Routes>
       <Route path="/" element={<HomePage/>} />
       <Route path="/about" element={<About/>} />
@@ -26,6 +27,7 @@ function App() {
       <Route path="/hooksprocess" element={<Hooks_Process/>}/>
       <Route path="/class" element={<Class />} />
       <Route path="/useeff" element={<Products />} />
+      <Route path="/effect" element={<Fetch />} />
      </Routes>
     </>
   )
