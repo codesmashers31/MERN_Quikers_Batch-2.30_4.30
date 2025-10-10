@@ -1,47 +1,27 @@
-import { useState } from "react";
+import { Link, Route, Routes } from "react-router-dom"
+import Register from "./components/Register"
+import Login from "./components/Login"
+import Dashboard from "./components/Dashboard"
+const App = () => {
+
+  return<>
+ 
 
 
-
-const  App = ()=> {
-
-  // const leo = {target:{value:"tis is value of input"}}
- //console.log('Components rerender');
-  
-  // leo.target.value
-  const [user,setUser] = useState("");
-
-  const takethevalue = (e)=>{
-
-  
-    
-
-
-     setUser(e.target.value)
-    
-      
-
-  }
-  
-
-
-
-  return (
-    <>
-    <form >
-      <label>UserName</label>: 
-      <input type="text" onChange={takethevalue}   />
-      
-
-     
-    </form>
-
-    <p>{user}</p>
-
-    <div className="">
-
+  <nav>
+    <div>
+      <Link to="/">Register</Link> | 
+      <Link to="/login">Login</Link> |
+      <Link to="/dashboard">Dashboard</Link>
     </div>
-    </>
-  )
-}
+  </nav>
 
+   <Routes>
+  <Route path="/" element={<Register/>} />
+   <Route path="/login" element={<Login />} />
+    <Route path="/dashboard" element={<Dashboard/>} />
+ </Routes>
+  </>
+
+}
 export default App
