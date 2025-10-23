@@ -71,7 +71,8 @@ const Register = ()=>{
     
     <div>
         <form onSubmit={handlesubmit}>
-            <input type="email" name="email" value={form.email} onChange={handledata}  />
+        <label htmlFor="email">Email</label>
+            <input type="email" id="email" name="email" value={form.email} onChange={handledata}  />
             <input type="password" name="password"  value={form.password} onChange={handledata}  />
             <input type="text" name="mobile" value={form.mobile} onChange={handledata}  />
             <input type="submit" value="Register" />

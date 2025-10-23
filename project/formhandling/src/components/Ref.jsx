@@ -1,66 +1,52 @@
-import { useRef, useState } from "react";
-import "./index.css"
+import { useRef } from "react";
 
-const App = ()=> {
 
-  console.log('Running...');
+const Ref = ()=>{
+
+console.log('Components running');
+
+const making = useRef(null)
+
+const show = useRef(null)
+
+// const [making,setMaking] = useState("")
+  
+  const teaprocess = ()=>{
+
+    console.log('Tea Process Going');
+    
+  const data = making.current.value
   
 
-const nameRef = useRef();
-const displayref = useRef(null);
-const message = useRef(false);
+  show.current.innerText = data
 
 
+  }
 
-
-const valuestakle = ()=>{
-
-//console.log(nameRef.current.value);
-
-const Refname = nameRef.current.value;
-
-displayref.current.innerText = `Welcome ${Refname}`
-//console.log(Refname);
-
-
-
-
-
-
-localStorage.setItem("users",Refname)
- message.current = true
-
- console.log(message.current);
- 
-
-
-}
 
 
   return (
+
     <>
+    <div className="flex justify-center items-center">
+
+       <input ref={making} onChange={teaprocess} className="bg-amber-800 mt-10 text-white p-1" type="text" placeholder="Enter the Number"  />
+        {/* <button className="bg-black text-white p-1 rounded mt-10 mx-1" >Submit</button> */}
+      <p ref={show}></p>
+    </div>
+
+
+
+   <div>
+    <div contentEditable>
+
+    </div>
+   </div>
    
-   <label>Enter The Name</label> :
-   <input ref={nameRef} type="text"  onChange={valuestakle} placeholder="Enter the name"  />
 
-  
-
-   <p ref={displayref}></p>
-
-    <p>{message.current?"Saving":"Not Save"}</p>
-      
-      
     </>
   )
+
 }
 
-export default App
-
-
-
-
-
-
-
-
-
+export default Ref;
