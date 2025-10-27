@@ -1,8 +1,11 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { UserContext } from "../context/UserContext";
 
 const Register = ()=>{
 
-
+   console.log(useContext(UserContext));
+   
+    const {datas,setdatas} = useContext(UserContext)
     const [form,setForm] = useState({email:"",password:"",mobile:""});
     const [formdatas,setFormDatas] = useState([])
     const [msg,setMsg] = useState("");
@@ -72,7 +75,7 @@ const Register = ()=>{
     <div>
         <form onSubmit={handlesubmit}>
         <label htmlFor="email">Email</label>
-            <input type="email" id="email" name="email" value={form.email} onChange={handledata}  />
+            <input type="email" id="email" name="email" value={datas.name} onChange={handledata}  />
             <input type="password" name="password"  value={form.password} onChange={handledata}  />
             <input type="text" name="mobile" value={form.mobile} onChange={handledata}  />
             <input type="submit" value="Register" />

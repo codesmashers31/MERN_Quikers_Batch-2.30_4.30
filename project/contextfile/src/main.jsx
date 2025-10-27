@@ -2,15 +2,12 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
-import {BrowserRouter} from 'react-router-dom'
-import UserProvider from './provider/UserProvider.jsx'
+import TeaProduct from './components/TeaProduct.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>
-    <UserProvider>
+    <TeaProduct>
     <App />
-    </UserProvider>
-    </BrowserRouter>
+    </TeaProduct>
   </StrictMode>,
 )
