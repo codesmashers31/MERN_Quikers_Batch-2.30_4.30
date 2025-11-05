@@ -1,0 +1,10 @@
+import path from 'path';
+
+
+// console.log(path);
+
+
+const datas = "MERN_Quikers_Batch-2.30_4.30/Node/path/"
+
+console.log('Direct Name',path.dirname(datas));
+console.log('Pathname',path.basename(datas));
