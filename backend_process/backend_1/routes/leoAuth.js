@@ -21,5 +21,17 @@ export default routes;
 // http://localhost:3000/api/datas/getdatas
 
 
-// get Method - headers - auth
+// get Method - headers - auth.
 // http://localhost:3000/api/datas/headersdata
+
+// http://localhost:3000/api/datas/headersdata
+
+
+// fetch('http://localhost:4000/api/data', formdatas, {
+//   headers: { 'x-custom-header': 'hello-from-client' }
+// })
+// .then(async res => {
+//   const hdr = res.headers.get('x-response-header'); // READ
+//   const body = await res.json();
+//   console.log(body, hdr);
+// });
