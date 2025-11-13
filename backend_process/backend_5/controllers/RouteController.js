@@ -41,3 +41,20 @@ export const getRoutesData = async(req,res)=>{
     
 
 }
+
+
+export const editData = async(req,res)=>{
+
+    // console.log(req.params);
+    
+  const {id} = req.params
+
+    const editget = await Chennai_Route_Model.findById(id)
+
+    //console.log(editget);
+
+    res.status(200).json({editget})
+    
+
+
+}

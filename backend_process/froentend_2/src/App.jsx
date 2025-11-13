@@ -50,6 +50,19 @@ setRouteDatas  ({startroute:"",endroute:""})
 
   }
 
+
+  const editdatas = async(id)=>{
+
+    const edit = await axios.get(`http://localhost:3000/api/chennairoute/edit/${id}`)
+    console.log(edit.data);
+
+    const datasget = await edit.data.editget
+    setRouteDatas(datasget)
+
+    
+
+  }
+
   useEffect(()=>{
     datafetch()
   },[datastore])
@@ -70,6 +83,8 @@ setRouteDatas  ({startroute:"",endroute:""})
             <h1>{e._id}</h1>
               <h1>{e.startroute}</h1>
               <h2>{e.endroute}</h2>
+              <button onClick={()=>editdatas(e._id)}>Edit</button>
+              <button>Delete</button>
             </div>
 
         ))}
